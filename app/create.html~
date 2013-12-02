@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS - Sinatra/REST Client Test</title>
+    <link href="css/app.css" rel="stylesheet" />
+  </head>
+  <body ng-app="companyModule">
+
+    <h1>Create Company</h1>
+
+    <form id="createCompanyForm" method="post">
+      <div>
+        <label for="name" class="required">Name:</label>
+        <input ng-model="company.name" type="text" name="name" id="name" placeholder="Enter name&hellip;" required />
+      </div>
+      
+      <div>
+        <label for="address" class="required">Address:</label>
+        <input ng-model="company.address" type="text" name="address" id="address" placeholder="Enter address&hellip;" required />
+      </div>
+      
+      <div>
+        <label for="city" class="required">City:</label>
+        <input ng-model="company.city" type="text" name="city" id="city" placeholder="Enter city&hellip;" required />
+      </div>
+      
+      <div>
+        <label for="country" class="required">Country:</label>
+        <input ng-model="company.country" type="text" name="country" id="country" placeholder="Enter country&hellip;" required />
+      </div>
+      
+      <div>
+        <label for="email">E-mail:</label>
+        <input ng-model="company.email" type="email" name="email" id="email" placeholder="Enter e-mail&hellip;" />
+      </div>
+      
+      <div>
+        <label for="phone">Phone Number:</label>
+        <input ng-model="company.phone" type="tel" name="phone" id="phone" placeholder="Enter phone number&hellip;" />
+      </div>
+      
+      <p>Everything marked with <span class="required"></span> is required.</p>
+      
+      <button ng-submit="createCompany(company)" type="submit">Create</button>
+    </form>
+
+
+    <!-- Use in Development -->
+    <script src="lib/angular-1.2.3.js"></script>
+    <!-- Use in Production -->
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script> -->
+    <script src="js/company/companyModule.js"></script>
+    <script src="js/company/companyController.js"></script>
+    <script src="js/company/companyService.js"></script>
+  </body>
+</html>
+

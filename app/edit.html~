@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS - Sinatra/REST Client Test</title>
+    <link href="css/app.css" rel="stylesheet" />
+  </head>
+  <body ng-app="companyModule">
+
+    <h1>Edit {{company.name}}</h1>
+
+    <form id="updateCompanyForm" method="post">
+      <div>
+        <label for="name" class="required">Name:</label>
+        <input ng-model="name" type="text" name="name" id="name" value="{{company.name}}" required />
+      </div>
+      
+      <div>
+        <label for="address" class="required">Address:</label>
+        <input ng-model="address" type="text" name="address" id="address" value="{{company.address}}" required />
+      </div>
+      
+      <div>
+        <label for="city" class="required">City:</label>
+        <input ng-model="city" type="text" name="city" id="city" value="{{company.city}}" required />
+      </div>
+      
+      <div>
+        <label for="country" class="required">Country:</label>
+        <input ng-model="country" type="text" name="country" id="country" value="{{company.country}}" required />
+      </div>
+      
+      <div>
+        <label for="email">E-mail:</label>
+        <input ng-model="email" type="email" name="email" id="email" value="{{company.email}}" />
+      </div>
+      
+      <div>
+        <label for="phone">Phone Number:</label>
+        <input ng-model="phone" type="tel" name="phone" id="phone" value="{{company.phone}}" />
+      </div>
+      
+      <p>Everything marked with <span class="required"></span> is required.</p>
+      
+      <button ng-submit="updateCompany(company)" type="submit">Update!</button>
+    </form>
+
+
+    <!-- Use in Development -->
+    <script src="lib/angular-1.2.3.js"></script>
+    <!-- Use in Production -->
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script> -->
+    <script src="js/company/companyModule.js"></script>
+    <script src="js/company/companyController.js"></script>
+    <script src="js/company/companyService.js"></script>
+  </body>
+</html>
+

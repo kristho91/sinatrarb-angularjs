@@ -1,0 +1,36 @@
+// File: myModule.js
+// Author: Kris Thomsen <mail@kristhomsen.dk> 2013
+
+//
+// File: service.rb
+// Author: Kris Thomsen <mail@kristhomsen.dk> 2013
+//
+
+var myModule = angular.module('myModule', []);
+
+myModule.controller('myController', function($scope, companyRepository) {
+    
+  companyRepository.getAllCompanies().success(function(companies) {
+    $scope.companies = companies
+  });
+    
+  $scope.createCompany = function() {
+  
+  };
+    
+  $scope.editCompany = function() {
+  
+  };
+    
+});
+
+
+myModule.factory('companyRepository', function() {
+  return { 
+    getAllCompanies: function() {
+      var url = '';
+      return $http.get(url);
+    }
+  };
+});
+

@@ -1,0 +1,13 @@
+/***************************************************
+ * File: main.css
+ * Author: Kris Thomsen <mail@kristhomsen.dk> 2013
+ ***************************************************/
+
+body {
+  font-family: "Open Sans", "Tahoma", sans-serif;
+}
+
+.required:after {
+  content: "*";
+  color: #FF0000;
+}

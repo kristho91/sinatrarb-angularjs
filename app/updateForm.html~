@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AngularJS - Sinatra/REST Client Test</title>
+    
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <h1>Edit {{name}}</h1>
+
+    <form id="createCompanyForm" method="post">
+      <div>
+        <label for="name" class="required">Name:</label>
+        <input ng-model="name" type="text" name="name" value="{{name}}" />
+      </div>
+      
+      <div>
+        <label for="address" class="required">Address:</label>
+        <input ng-model="address" type="text" name="address" value="{{address}}" />
+      </div>
+      
+      <div>
+        <label for="city" class="required">City:</label>
+        <input ng-model="city" type="text" name="city" value="{{city}}" />
+      </div>
+      
+      <div>
+        <label for="country" class="required">Country:</label>
+        <input ng-model="country" type="text" name="country" value="{{country}}" />
+      </div>
+      
+      <div>
+        <label for="email">E-mail:</label>
+        <input ng-model="email" type="email" name="email" value="{{email}}" />
+      </div>
+      
+      <div>
+        <label for="phone">Phone Number:</label>
+        <input ng-model="phone" type="tel" name="phone" value="{{phone}}" />
+      </div>
+      
+      <p>Everything marked with <span class="required"></span> is required.</p>
+      
+      <button type="submit">Update</button>
+    </form>
+
+
+  </body>
+</html>
+
+
